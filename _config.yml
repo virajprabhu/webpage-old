@@ -1,15 +1,15 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: Viraj Prabhu's Homepage
+description: "Life, Computer Science and Everything"
+meta_description: "Viraj Prabhu on Life, Computer Science and Everything"
 
 markdown: redcarpet
 highlighter: pygments
 logo: false
 paginate: 15
 baseurl: /
-domain_name: 'http://yourblog-domain.com'
+domain_name: 'http://virajprabhu.com'
 google_analytics: 'UA-XXXXXXXX-X'
 
 # Details for the RSS feed generator
 url:            'blog url'
-author:         'Your Name'
+author:         'Viraj Prabhu'
