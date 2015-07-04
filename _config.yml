@@ -6,10 +6,11 @@ markdown: redcarpet
 highlighter: pygments
 logo: false
 paginate: 15
+paginate_path: "/blog/page:num/"
 baseurl: /
 domain_name: 'http://virajprabhu.com'
 google_analytics: 'UA-XXXXXXXX-X'
 
-# Details for the RSS feed generator
+# Details for the RSS fede generator
 url:            'blog url'
 author:         'Viraj Prabhu'
