@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 ---
-
+<link rel="icon" type="image/png" href="../assets/favicon.png">
 <article class="post">
 	 <header class="post-header">
             <h2 class="post-title">Projects</h2>
@@ -10,11 +10,34 @@ title: Projects
     <section class="post-excerpt">
         You can find my CV <a href="../assets/CV/cv.pdf" class="cv">here</a>.
     </section>
-    <br>
-    <footer class="post-meta">
-        {% if site.author %}
-            <img class="author-thumb" src="../assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
-            {{ site.author }}
-        {% endif %}
-    </footer>
+    <hr>
 </article>
+
+<main id="content" class="content" role="main">
+
+    {% for post in site.posts %}
+        {% if post.layout == 'project' %}
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            </header>
+            <section class="post-excerpt">
+                {{ post.excerpt }} <a class="read-more" href="{{ post.url }}">&raquo;</a>
+            </section>
+            <footer class="post-meta">
+                {% if site.author %}
+                    <img class="author-thumb" src="../assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
+                    {{ site.author }}
+                {% endif %}
+                {% if post.categories.size > 0 %} 
+                    {{ post.categories | array_to_sentence_string | prepend: 'on ' }} 
+                {% endif %}
+                <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
+                    {{ post.date | date_to_string }}
+                </time> 
+            </footer>
+        </article>
+        {% endif %}
+    {% endfor %}
+
+</main>

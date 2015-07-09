@@ -2,9 +2,18 @@
 layout: default
 title: Home
 cover: false
-about: 'about.html'
+social-icons:
+ - title: GitHub
+   url: https://github.com/davidensinger
+   class: github
+ - title: LinkedIn
+   url: https://www.linkedin.com/in/davidensinger
+   class: linkedin
+ - title: Twitter
+   url: https://twitter.com/davidensinger
+   class: twitter
 ---
-
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <header class="main-header {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
     <nav class="main-nav overlay clearfix">
             {% if page.logo %}
@@ -21,10 +30,9 @@ about: 'about.html'
             </h2>
             <br>
             <h5 class="tabs">
-                <a href='blog/'>  Blog  </a> |
-                {% if page.about %} 
-                <a href='about/'>  About  </a> {% endif %} |
-                <a href='projects/'>  Projects  </a>
+                <a href='blog/'>   Blog   </a>  | 
+                <a href='about/'>   About   </a>  | 
+                <a href='projects/'>   Projects   </a>
             </h5>
         </div>
     </div>
@@ -35,6 +43,15 @@ about: 'about.html'
     <section class="post-excerpt">
         Welcome to Viraj Prabhu's homepage! This website is powered by Jekyll and is hosted using Github Pages. Many thanks to Rosario Rascuna for his Kasper theme. Feel free to check out my projects and drop me a line if you wish to discuss something or face any issues with the code.
     </section>
+    <div class="socialicons">
+    {% for icon in social-icons %}
+        One social icon found.<br>
+        <a class="social-icon--link {{ icon.class }}" href="{{ icon.url }}">
+            {% include {{ icon.class | prepend: 'social-icons/' | append: '.svg' }} %}
+            <span class="social-icon--title visuallyHidden">{{ icon.title }}</span>
+        </a>
+    {% endfor %}
+    </div>
     <footer class="post-meta">
         {% if site.author %}
             <img class="author-thumb" src="../assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
