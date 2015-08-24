@@ -2,20 +2,29 @@
 layout: page
 title: About Me
 ---
-
 <article class="post">
 	 <header class="post-header">
             <h2 class="post-title">About me</h2>
 	</header>
     <section class="post-excerpt">
-        <p>Hey there!</p>
-		My name is Viraj Prabhu.I was born and raised in Mumbai and studied computer science at BITS Pilani. I currently work 
-		as a software developer at Adobe Systems in Bangalore. I'm an AI enthusiast and find computer vision particulatly fascinating, and enjoy building applications and working on challenging problems with real life utility. I also dabble in writing, music and quizzing.</p>
+        Hello! <br/><br/>
+		
+        I'm Viraj Prabhu. Born and raised in Mumbai, I recently completed my undergraduate studies in computer science at <a href="http://www.bits-pilani.ac.in/".>BITS Pilani.</a> <br/><br/>
+
+        I currently work as a software developer for Adobe in Bangalore. I'm an AI enthusiast and find computer vision particulatly fascinating, and enjoy building applications and working on challenging problems with real life utility. I also dabble in writing, music and quizzing.<br/><br/>
     </section>
     <footer class="post-meta">
         {% if site.author %}
             <img class="author-thumb" src="../assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
             {{ site.author }}
+            <span class="social-icons" style="float:right;">
+                {% for icon in site.social-icons%}
+                    <a class="social-icon--link {{ icon.class }}" href="{{ icon.url }}">
+                        &nbsp;{% include {{ icon.class | prepend: 'social-icons/' | append: '.svg'}} %}
+                    </a>
+                {% endfor %}
+            </span>
         {% endif %}
+
     </footer>
 </article>

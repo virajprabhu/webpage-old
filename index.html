@@ -2,16 +2,6 @@
 layout: default
 title: Home
 cover: false
-social-icons:
- - title: GitHub
-   url: https://github.com/davidensinger
-   class: github
- - title: LinkedIn
-   url: https://www.linkedin.com/in/davidensinger
-   class: linkedin
- - title: Twitter
-   url: https://twitter.com/davidensinger
-   class: twitter
 ---
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <header class="main-header {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
@@ -41,21 +31,21 @@ social-icons:
 
 <article class="post">
     <section class="post-excerpt">
-        Welcome to Viraj Prabhu's homepage! This website is powered by Jekyll and is hosted using Github Pages. Many thanks to Rosario Rascuna for his Kasper theme. Feel free to check out my projects and drop me a line if you wish to discuss something or face any issues with the code.
+        Hey there, I'm Viraj. Welcome to my homepage! Feel free to check out my <a href='blog/'>blog</a> and <a href='projects/'>projects</a>. Do <a href="mailto:prabhuviraj@gmail.com">drop me a line</a> if you wish to discuss something or face any issues with my code.
     </section>
-    <div class="socialicons">
-    {% for icon in social-icons %}
-        One social icon found.<br>
-        <a class="social-icon--link {{ icon.class }}" href="{{ icon.url }}">
-            {% include {{ icon.class | prepend: 'social-icons/' | append: '.svg' }} %}
-            <span class="social-icon--title visuallyHidden">{{ icon.title }}</span>
-        </a>
-    {% endfor %}
-    </div>
+
     <footer class="post-meta">
         {% if site.author %}
             <img class="author-thumb" src="../assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
             {{ site.author }}
+            <span class="social-icons" style="float:right;">
+                {% for icon in site.social-icons%}
+                    <a class="social-icon--link {{ icon.class }}" href="{{ icon.url }}">
+                        &nbsp;{% include {{ icon.class | prepend: 'social-icons/' | append: '.svg'}} %}
+                    </a>
+                {% endfor %}
+            </span>
         {% endif %}
+        
     </footer>
 </article>
