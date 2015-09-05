@@ -1,17 +1,36 @@
 ---
-layout: page
+layout: default
 title: About Me
+cover: false
 ---
-<article class="post">
-	 <header class="post-header">
-            <h2 class="post-title">About me</h2>
-	</header>
-    <section class="post-excerpt">
-        Hello! <br/><br/>
-		
-        I'm Viraj Prabhu. Born and raised in Mumbai, I recently completed my undergraduate studies in computer science at <a href="http://www.bits-pilani.ac.in/".>BITS Pilani.</a> <br/><br/>
+<header class="main-header {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
+    <nav class="main-nav overlay clearfix">
+            {% if page.logo %}
+                <a class="blog-logo" href="{{ site.baseurl }}">
+                    <img src="{{ page.logo }}" alt="Blog Logo" />
+                </a>
+            {% endif %}
+        <a class="subscribe-button icon-feed" href="{{ site.baseurl }}rss.xml">Subscribe</a>
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">About Me</h1>
+            <br>
+            <h5 class="tabs">
+                <a href='../'>  Home  </a>  | 
+                <a href='../blog/'>  Blog  </a>  |  
+                <a href='../projects/'>  Projects  </a>
+            </h5>
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+</header>
 
-        I currently work as a software developer for Adobe in Bangalore. I'm an AI enthusiast and find computer vision particulatly fascinating, and enjoy building applications and working on challenging problems with real life utility. I also dabble in writing, music and quizzing.<br/><br/>
+<article class="post">
+    <section class="post-excerpt">
+        Hey, I'm Viraj. Born and raised in Mumbai, I recently completed my undergraduate studies in computer science at <a href="http://www.bits-pilani.ac.in/".>BITS Pilani.</a> <br/><br/>
+
+        I currently work as a software developer for Adobe in Bangalore. I'm an AI enthusiast and find computer vision particularly fascinating, and enjoy building applications and working on challenging problems with real life utility. I also dabble in writing, music and quizzing.<br/><br/>
     </section>
     <footer class="post-meta">
         {% if site.author %}

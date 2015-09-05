@@ -1,6 +1,7 @@
 ---
 layout: project
 title: "Automatic Calibration and Boresighting"
+excerpt: On working towards developing robust vision sensors for defense applications.
 date: 2015-07-02
 ---
 I interned at Tonbo Imaging, Bangalore from January-June '15 as my Practice School component of my undergrad course. Tonbo Imaging designs, builds and deploys advanced imaging and sensor systems to sense, understand and control complex environments. It was a great experience with a  small team of passionate employees and gave me considerable exposure across a wide range of topics ranging from embedded development camera calibration techniques. <br/>

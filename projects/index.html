@@ -1,16 +1,36 @@
 ---
-layout: page
+layout: default
 title: Projects
+cover: false
 ---
+<header class="main-header {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
+    <nav class="main-nav overlay clearfix">
+            {% if page.logo %}
+                <a class="blog-logo" href="{{ site.baseurl }}">
+                    <img src="{{ page.logo }}" alt="Blog Logo" />
+                </a>
+            {% endif %}
+        <a class="subscribe-button icon-feed" href="{{ site.baseurl }}rss.xml">Subscribe</a>
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">Projects</h1>
+            <br>
+            <h5 class="tabs">
+                <a href='../'>  Home  </a>  | 
+                <a href='../blog/'>  Blog  </a>  |  
+                <a href='../about/'>  About  </a>
+            </h5>
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+</header>
+
 <link rel="icon" type="image/png" href="../assets/favicon.png">
 <article class="post">
-	 <header class="post-header">
-            <h2 class="post-title">Projects</h2>
-	</header>
     <section class="post-excerpt">
         You can find my CV here - (<a href="../assets/CV/cv1.pdf" class="cv1">1 Pg</a> | <a href="../assets/CV/cv2.pdf" class="cv2">2 Pg </a>) 
     </section>
-    <hr>
 </article>
 
 <main id="content" class="content" role="main">

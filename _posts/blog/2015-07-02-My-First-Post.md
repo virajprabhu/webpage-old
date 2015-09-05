@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Hola!"
+excerpt: Welcome, human.
+category: Life, the Universe and Everything
+tags: [welcome]
 date: 2015-07-02
 ---
 <p>

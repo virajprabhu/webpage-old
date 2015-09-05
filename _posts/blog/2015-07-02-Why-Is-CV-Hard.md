@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Why Is Computer Vision Hard?"
+excerpt: "A brief overview of how far we've come and what lies ahead."
+category: Computer Science
+tags: [research, computer-vision, thoughts]
 date: 2015-07-02
 ---
 Nearly all fields of computer science have made leaps and bounds in the past few decades. We've created personal 
