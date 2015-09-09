@@ -2,7 +2,7 @@
 layout: post
 title: "Hola!"
 excerpt: Welcome, human.
-category: Life, the Universe and Everything
+category: General
 tags: [welcome]
 date: 2015-07-02
 ---
