@@ -2,7 +2,7 @@
 layout: project
 title: "Read Timer"
 excerpt: A chrome extension to learn your read speed and provide estimates of article read times.
-date: 2015-18-10
+date: 2015-10-18
 ---
 
 A light week at work coupled with a niggling urge to build something led a colleague and me to pick up something we felt we'd like to use - a read timer. The said read timer would provide a reasonably accurate estimate of the time it would take to read a blog article without having to scroll all the way down (and thus decide if it was worth it). Personally, it appealed to me on several fronts - 
@@ -27,3 +27,5 @@ We decided to go the non-API way (we weren't going to pay for full access), and 
 </ul>
 
 There are still a couple of bugs/UX issues we want to iron out before publishing a 1.0 release to the store. We'd really like to do better with the learn feature and also improve the parsing. Another ambitious feature would be to factor in the complexity of an article and the nature of content (say, a comic) while providing an estimate - there are a ton of such possibilities. We're planning to explore a few of them in the coming weeks, and welcome all sorts of contribution in code, opinions or otherwise!
+
+EDIT: The extension is live! Check it out <a href="https://chrome.google.com/webstore/detail/read-timer/ojcneamhcbpginfcagjnmeeegbhpngdk?utm_source=chrome-app-launcher-info-dialog"><b>here.</b></a>
