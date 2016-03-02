@@ -5,6 +5,8 @@ excerpt: A chrome extension to learn your read speed and provide estimates of ar
 date: 2015-10-18
 ---
 
+<a href="../../../projects/readTimer.html">(Project Page)</a>
+
 A light week at work coupled with a niggling urge to build something led a colleague and me to pick up something we felt we'd like to use - a read timer. The said read timer would provide a reasonably accurate estimate of the time it would take to read a blog article without having to scroll all the way down (and thus decide if it was worth it). Personally, it appealed to me on several fronts - 
 <ul>
 	<li> It was a small project and would be easy to put out in a short timeframe.</li>
